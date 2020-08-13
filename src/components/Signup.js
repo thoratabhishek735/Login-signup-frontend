@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { useHistory } from 'react-router-dom'
+import { useHistory, Link } from 'react-router-dom'
 
 
 
@@ -36,34 +36,38 @@ const postData=()=>{
        <React.Fragment>
            <h2 className="text-center">Signup</h2>
            <div className="col-lg-6 mt-5 offset-lg-3">
-            <div class="form-group">
+            <div className="form-group">
     <label for="exampleInputEmail1">Email address</label>
-    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=>setEmail(e.target.value)}/>
+    <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=>setEmail(e.target.value)}/>
     
   </div>
 
-  <div class="form-group">
+  <div className="form-group">
     <label for="exampleInputEmail1">type</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=>setType(e.target.value)}/>
+    <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=>setType(e.target.value)}/>
     
   </div>
 
-  <div class="form-group">
+  <div className="form-group">
     <label for="exampleInputEmail1">Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=>setName(e.target.value)}/>
+    <input type="text" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=>setName(e.target.value)}/>
     
   </div>
  
           
-            <div class="form-group">
+            <div className="form-group">
     <label for="exampleInputEmail1">Mobile</label>
-    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=>setMobile(e.target.value)}/>
+    <input type="number" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={(e)=>setMobile(e.target.value)}/>
     
   </div>
-  <div class="form-group">
+  <div className="form-group">
     <label for="exampleInputPassword1">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1" onChange={(e)=>setPassword(e.target.value)}/>
+    <input type="password" className="form-control" id="exampleInputPassword1" onChange={(e)=>setPassword(e.target.value)}/>
   </div>
+  </div>
+
+  <div className="mt-5 text-center font-weight-bold">
+      <Link to="/login">Already have account</Link>
   </div>
 
   <button type="button" className="btn btn-lg btn-danger d-block mx-auto w-20 mt-5" onClick={()=>{postData()}}>Signup</button>
